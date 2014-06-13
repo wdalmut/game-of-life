@@ -8,7 +8,7 @@ for ($i=0; $i<$ground->getBorderDimension(); $i++) {
     for ($j=0; $j<$ground->getBorderDimension(); $j++) {
         $cell = $ground->getCell($i, $j);
 
-        if (rand(0,1) == 1) {
+        if (rand(0,5) == 1) {
             $cell->setStatus(Cell::ALIVE);
             $cell->applyState();
         }
@@ -45,7 +45,7 @@ while(true) {
             if ($cell->isAlive()) {
                 echo "♥ ";
             } else {
-                echo " ";
+                echo "  ";
             }
         }
         echo PHP_EOL;
@@ -53,7 +53,7 @@ while(true) {
     ob_flush();
     ob_end_clean();
 
-    sleep(1);
+    usleep(100000);
 }
 
 function get_neighbors(Ground $ground, $i, $j)
