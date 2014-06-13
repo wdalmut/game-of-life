@@ -9,8 +9,6 @@ Now just play it!
 
     php play.php
 
-Refresh is every 100ms
-
 ## Load from files
 
     php play.php grouds/acord
