@@ -9,4 +9,10 @@ Now just play it!
 
     php play.php
 
-Refresh is every second.
+Refresh is every 100ms
+
+## Load from files
+
+    php play.php grouds/acord
+
+You can design your network as you prefer
