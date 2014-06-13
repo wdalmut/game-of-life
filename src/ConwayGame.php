@@ -15,9 +15,7 @@ class ConwayGame implements GameStrategy
     {
         $aliveNeighbors = $this->countAliveNeighbors($neighbors);
 
-        if ($aliveNeighbors >= 0 && $aliveNeighbors < 2) {
-            $cell->setStatus(Cell::DEAD);
-        } else if ($aliveNeighbors == 2 || $aliveNeighbors == 3) {
+        if ($aliveNeighbors == 2 || $aliveNeighbors == 3) {
             $cell->setStatus(Cell::ALIVE);
         } else {
             $cell->setStatus(Cell::DEAD);

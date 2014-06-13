@@ -43,7 +43,7 @@ function print_ground(Ground $ground)
             $cell = $ground->getCell($i, $j);
 
             if ($cell->isAlive()) {
-                echo "♥ ";
+                echo "■";
             } else {
                 echo "  ";
             }
@@ -53,7 +53,7 @@ function print_ground(Ground $ground)
     ob_flush();
     ob_end_clean();
 
-    usleep(100000);
+    usleep(10000);
 }
 
 function get_neighbors(Ground $ground, $i, $j)
