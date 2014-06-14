@@ -43,9 +43,9 @@ function print_ground(Ground $ground)
             $cell = $ground->getCell($i, $j);
 
             if ($cell->isAlive()) {
-                echo "■";
+                echo "0";
             } else {
-                echo "  ";
+                echo " ";
             }
         }
         echo PHP_EOL;
@@ -53,7 +53,7 @@ function print_ground(Ground $ground)
     ob_flush();
     ob_end_clean();
 
-    usleep(10000);
+    usleep(100000);
 }
 
 function get_neighbors(Ground $ground, $i, $j)
